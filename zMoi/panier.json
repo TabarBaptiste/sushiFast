@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "SushiBox1",
+      "image": "https://test.jpg",
+      "price": 10,
+      "pieces": 6,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "name": "SushiBox2",
+      "image": "https://test2.jpg",
+      "price": 15,
+      "pieces": 8,
+      "quantity": 1
+    }
+  ],
+  "total": 35
+}

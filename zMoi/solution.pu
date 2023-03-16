@@ -1,0 +1,32 @@
+@startuml t
+
+title Diagramme de la solution
+
+actor Client
+participant "Serveur API" as Serveur_API
+participant "Serveur d'images" as Serveur_images
+database "Base de données" as Base_de_donnees
+
+Client -> Serveur_API : Requête pour récupérer les données des boxes
+Serveur_API -> Base_de_donnees : Requête pour récupérer les données des boxes
+Serveur_API <- Base_de_donnees : Réponse avec les données des boxes
+
+Client -> Serveur_images : Requête pour récupérer l'image d'une box
+Serveur_images <- Base_de_donnees : Réponse avec l'image de la box
+
+Client -> Serveur_API : Requête pour ajouter une box au panier
+Serveur_API -> Base_de_donnees : Requête pour mettre à jour le panier
+Serveur_API <- Base_de_donnees : Réponse avec le panier mis à jour
+
+Client -> Serveur_API : Requête pour récupérer le panier
+Serveur_API -> Base_de_donnees : Requête pour récupérer le panier
+Serveur_API <- Base_de_donnees : Réponse avec le panier
+
+Client -> Serveur_API : Requête pour supprimer une box du panier
+Serveur_API -> Base_de_donnees : Requête pour mettre à jour le panier
+Serveur_API <- Base_de_donnees : Réponse avec le panier mis à jour
+
+Client -> Serveur_API : Requête pour valider la commande
+Serveur_API -> Base_de_donnees : Requête pour valider la commande
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml ut
+left to right direction
+
+actor Utilisateur as user
+rectangle Application {
+  usecase "Voir la liste des boxes" as UC1
+  usecase "Voir le détail d'une box" as UC2
+  usecase "Ajouter une box au panier" as UC3
+  usecase "Voir le panier" as UC4
+  usecase "Modifier la commande" as UC6
+  usecase "Supprimer la commande" as UC7
+  usecase "Valider la commande" as UC5
+}
+
+user --> UC1
+user --> UC2
+user --> UC3
+user --> UC4
+user --> UC6
+user --> UC7
+user --> UC5
+
+@enduml
