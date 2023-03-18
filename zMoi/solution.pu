@@ -1,6 +1,6 @@
 @startuml t
 
-title Diagramme de la solution
+title Diagramme de solution
 
 actor Client
 participant "Serveur API" as Serveur_API

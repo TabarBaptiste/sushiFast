@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Nom</th>
+      <th>Prix</th>
+      <th>Pieces</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produit of produits">
+      <td>{{ produit.id }}</td>
+      <td>{{ produit.nom }}</td>
+      <td>{{ produit.prix }}</td>
+      <td>{{ produit.pieces }}</td>
+      <td><img src="/api/images/{{ produit.image }}.jpg" alt="{{ produit.name }}"></td>    </tr>
+  </tbody>
+</table>

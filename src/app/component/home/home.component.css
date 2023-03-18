@@ -1,3 +1,26 @@
-.home {
-  margin-top: -5%;
+.container-fluid {
+  background-color: #f5f5f5;
+  transition: background-color 0.4s ease-in-out;
+  border-radius: 20px; /* Coins arrondis */
+  padding: 50px; /* Marge intérieure */
+  background: rgba(255, 255, 255, 0.9); /* Couleur de fond semi-transparente */
+}
+.container-fluid:hover {
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; /* Espace entre les colonnes */
+}
+
+.col-md-6 {
+  border-radius: 20px; /* Coins arrondis */
+  overflow: hidden; /* Masquer le contenu qui dépasse */
+}
+
+.col-md-6 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Redimensionner l'image pour remplir la colonne */
 }
