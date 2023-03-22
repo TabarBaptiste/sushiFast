@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
-
+import { MyApiService } from 'src/app/service/my-api.service';
 @Component({
   selector: 'app-produits',
   templateUrl: './produits.component.html',
@@ -10,19 +8,13 @@ import { environment } from '../../../environments/environment';
 export class ProduitsComponent implements OnInit {
 
   produits: any[] = [];
-  images: any[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private myApiService: MyApiService) { }
 
   ngOnInit() {
-    this.http.get<any[]>(`${environment.apiUrl}`).subscribe(
-      boxes => {
-        this.produits = boxes;
-      },
-      error => {
-        console.error('Une erreur est survenue lors de la récupération des produits :', error);
-      }
-    );
+    this.myApiService.getProduits().subscribe((data: any) => {
+      this.produits = data;
+    });
   }
 
 }

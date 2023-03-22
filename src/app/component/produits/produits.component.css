@@ -39,3 +39,10 @@ img {
   width: 100px;
   height: auto;
 }
+
+button{
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  border-color: #e621af;
+}

@@ -1,0 +1,8 @@
+.card{
+  --bs-card-bg: #000;
+  color: white;
+  background: rgba(0, 0, 0, 0.9); /* Couleur de fond semi-transparente */
+}
+.card:hover{
+  background: rgba(0, 0, 0); /* Couleur de fond semi-transparente */
+}

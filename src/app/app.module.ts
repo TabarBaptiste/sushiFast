@@ -7,10 +7,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './component/home/home.component';
-import { DetailsComponent } from './component/details/details.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ProduitsComponent } from './component/produits/produits.component';
+import { DetailComponent } from './component/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +18,9 @@ import { ProduitsComponent } from './component/produits/produits.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    DetailsComponent,
     ContactComponent,
     ProduitsComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

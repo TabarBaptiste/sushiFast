@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Avocat</th>
+      <th>Saumon</th>
+      <th>Cheese</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let details of id">
+      <td>{{ details.nom }}</td>
+      <td>{{ details.prix }}</td>
+      <td>{{ details.pieces }}</td>
+    </tr>
+    </tbody>
+</table>

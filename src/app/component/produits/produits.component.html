@@ -5,7 +5,10 @@
       <th>Nom</th>
       <th>Prix</th>
       <th>Pieces</th>
+      <th>Saveurs</th>
+      <th>Aliments</th>
       <th>Image</th>
+      <!--<th>Détails</th>-->
     </tr>
   </thead>
   <tbody>
@@ -14,6 +17,10 @@
       <td>{{ produit.nom }}</td>
       <td>{{ produit.prix }}</td>
       <td>{{ produit.pieces }}</td>
+      <td>{{ produit.saveurs }}</td>
+      <td>{{ produit.aliments }}</td>
       <td><img src="http://localhost:8080/api/images/{{ produit.image }}" alt="{{ produit.name }}"></td>
+      <!--<td><button><a [routerLink]="['/box-details', produit.id]">{{ produit.name }}</a>Détails</button></td>-->
+    </tr>
     </tbody>
 </table>
