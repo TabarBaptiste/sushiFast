@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MyApiService } from 'src/app/service/my-api.service';
 
 @Component({
   selector: 'app-detail',
@@ -9,18 +9,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
 
-  id: any[] = [];
+  boxId: any;
+  box: any;
 
-  constructor(private route: ActivatedRoute,private http: HttpClient) { }
+  constructor(
+    private route: ActivatedRoute,
+    private myApiService: MyApiService
+  ) { }
 
   ngOnInit(): void {
-    //this.id = parseInt(this.route.snapshot.paramMap.get('id') ?? '0');
+    this.boxId = this.route.snapshot.paramMap.get('id');
 
-    this.http.get<any>(`${this.id}`).subscribe(
-      details => {
-        this.id = details;
-      }
-    )
+    this.myApiService.getBoxDetails(this.boxId).subscribe((data: any) => {
+      this.box = data;
+    });
   }
 
 }

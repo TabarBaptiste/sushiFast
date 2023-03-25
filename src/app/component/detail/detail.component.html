@@ -1,16 +1,11 @@
-<table>
-  <thead>
-    <tr>
-      <th>Avocat</th>
-      <th>Saumon</th>
-      <th>Cheese</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let details of id">
-      <td>{{ details.nom }}</td>
-      <td>{{ details.prix }}</td>
-      <td>{{ details.pieces }}</td>
-    </tr>
-    </tbody>
-</table>
+<div class="box_details">
+  <h2>{{ box?.nom }}</h2>
+  <ul>
+    <li><strong>Saveurs:</strong> {{ box?.saveurs }}</li>
+    <li><strong>Aliments:</strong>
+      <ul>
+        <li *ngFor="let aliment of box?.aliments">{{ aliment.nom }} ({{ aliment.quantite }})</li>
+      </ul>
+    </li>
+  </ul>
+</div>

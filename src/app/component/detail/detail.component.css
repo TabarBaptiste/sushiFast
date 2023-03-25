@@ -1,0 +1,13 @@
+.box_details {
+  background: rgba(0, 0, 0, 0.9);
+  transition: background-color 0.4s ease-in-out;
+  margin-bottom: 2%;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box_details:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}

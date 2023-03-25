@@ -13,4 +13,8 @@ export class MyApiService {
     return this.http.get(`${environment.apiUrl}`);
   }
 
+  getBoxDetails(id: number) {
+    return this.http.get(`http://localhost:8080/api/boxes/${id}`);
+  }
+
 }
