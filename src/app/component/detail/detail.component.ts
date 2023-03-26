@@ -18,10 +18,11 @@ export class DetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.boxId = this.route.snapshot.paramMap.get('id');
-
-    this.myApiService.getBoxDetails(this.boxId).subscribe((data: any) => {
-      this.box = data;
+    this.route.paramMap.subscribe(params => { // Souscription aux modifications de la route (changement de paramètres)
+      this.boxId = params.get('id'); // Récupération de l'id dans les paramètres de la route
+      this.myApiService.getBoxDetails(this.boxId).subscribe((data: any) => { // Appel du service pour récupérer les détails de la box correspondante à l'id
+        this.box = data; // Stockage des détails dans une variable
+      });
     });
   }
 
