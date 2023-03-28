@@ -1,0 +1,19 @@
+<div class="content">
+  <div class="panier">
+    <h2>Panier</h2>
+    <div class="produits">
+      <div *ngIf="panier.length === 0">Votre panier est vide</div>
+      <div class="produit" *ngFor="let produit of panier">
+        <h3>{{ produit.nom }}</h3>
+        <img src="{{ produit.image }}" alt="{{ produit.nom }}">
+        <div class="description">{{ produit.description }}</div>
+        <div class="prix">{{ produit.prix }} €</div>
+        <button (click)="supprimerProduit(produit)">Supprimer</button>
+      </div>
+    </div>
+    <!--<div class="actions">
+    <button *ngIf="panier.length > 0" (click)="viderPanier()">Vider le panier</button>
+    <button *ngIf="panier.length > 0" (click)="commander()">Commander</button>
+  </div>-->
+  </div>
+</div>

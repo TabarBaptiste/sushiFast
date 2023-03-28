@@ -1,4 +1,4 @@
-.box_details {
+.panier {
   background: rgba(0, 0, 0, 0.9);
   transition: background-color 0.4s ease-in-out;
   margin-bottom: 2%;
@@ -7,7 +7,7 @@
   padding: 10px;
 }
 
-.box_details:hover {
+.panier:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
 }
@@ -22,8 +22,3 @@
   margin-top: -1%;
   margin-bottom: -0.1%;
 }
-
-span{
-  font-size: 70%;
-}
-

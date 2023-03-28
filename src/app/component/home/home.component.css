@@ -5,6 +5,7 @@
   border-radius: 20px; /* Coins arrondis */
   padding: 50px; /* Marge intérieure */
   background: rgba(0, 0, 0, 0.9); /* Couleur de fond semi-transparente */
+  margin-bottom: 2%;
 }
 .container-fluid:hover {
   background: rgba(0, 0, 0); /* Couleur de fond semi-transparente */

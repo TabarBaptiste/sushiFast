@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MyApiService } from 'src/app/service/my-api.service';
+import { PanierService } from 'src/app/service/panier.service';
 
 @Component({
   selector: 'app-detail',
@@ -11,10 +12,12 @@ export class DetailComponent implements OnInit {
 
   boxId: any;
   box: any;
+  urlImages: string = "http://localhost:8080/api/images/";
 
   constructor(
     private route: ActivatedRoute,
-    private myApiService: MyApiService
+    private myApiService: MyApiService,
+    private panierService: PanierService
   ) { }
 
   ngOnInit(): void {
@@ -24,6 +27,13 @@ export class DetailComponent implements OnInit {
         this.box = data; // Stockage des détails dans une variable
       });
     });
+  }
+
+  ajouterAuPanier() {
+    if (this.box) {
+      console.log(this.box);
+      this.panierService.ajouterProduit(this.box);
+    }
   }
 
 }
