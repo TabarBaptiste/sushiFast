@@ -6,7 +6,6 @@ import { MyApiService } from 'src/app/service/my-api.service';
   styleUrls: ['./produits.component.css']
 })
 export class ProduitsComponent implements OnInit {
-  [x: string]: any;
 
   produits: any[] = [];
   urlImages: string = "http://localhost:8080/api/images/";

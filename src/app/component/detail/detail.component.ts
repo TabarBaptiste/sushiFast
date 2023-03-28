@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Box } from 'src/app/models/box';
 import { MyApiService } from 'src/app/service/my-api.service';
 import { PanierService } from 'src/app/service/panier.service';
 
@@ -10,6 +11,7 @@ import { PanierService } from 'src/app/service/panier.service';
 })
 export class DetailComponent implements OnInit {
 
+  panier: any = [];
   boxId: any;
   box: any;
   urlImages: string = "http://localhost:8080/api/images/";
@@ -17,23 +19,44 @@ export class DetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private myApiService: MyApiService,
-    private panierService: PanierService
+    private panierService: PanierService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => { // Souscription aux modifications de la route (changement de paramètres)
-      this.boxId = params.get('id'); // Récupération de l'id dans les paramètres de la route
-      this.myApiService.getBoxDetails(this.boxId).subscribe((data: any) => { // Appel du service pour récupérer les détails de la box correspondante à l'id
+    // Récupération de l'id dans les paramètres de la route
+    this.route.paramMap.subscribe(params => {
+      this.boxId = params.get('id');
+      this.myApiService.getBoxDetails(this.boxId).subscribe((data: any) => {
         this.box = data; // Stockage des détails dans une variable
       });
     });
+
+    // Affichage du contenu du panier
+    console.log(this.panierService.getProduits());
   }
 
-  ajouterAuPanier() {
-    if (this.box) {
-      console.log(this.box);
-      this.panierService.ajouterProduit(this.box);
+
+  ajouterAuPanier(box: Box) {
+    this.panierService.ajouterProduit(box);
+    alert('La boîte a été ajoutée au panier.');
+  }
+
+
+  /*addPanier(box: Box) {
+    let panier: any = localStorage.getItem('panier');
+    if (!panier) {
+      panier = [];
+    } else {
+      panier = JSON.parse(panier);
     }
+    panier.push(box);
+    localStorage.setItem('panier', JSON.stringify(panier));
+    alert('La boîte a été ajoutée au panier.');
+  }*/
+
+  goToPanier() {
+    this.router.navigate(['/panier']);
   }
 
 }

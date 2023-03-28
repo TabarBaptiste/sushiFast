@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class PanierComponent implements OnInit {
 
   panier: Box[] = [];
+  urlImages: string = "http://localhost:8080/api/images/";
 
   constructor(
     private panierService: PanierService,
@@ -20,14 +21,16 @@ export class PanierComponent implements OnInit {
   ngOnInit(): void {
     this.panier = this.panierService.getProduits();
     console.log(this.panier); // ajouter cette instruction
+    console.log("this.panier")
   }
 
-  supprimerProduit(index: any): void {
-    this.panierService.supprimerProduit(index);
+  supprimerProduit(produit: any): void {
+    this.panierService.supprimerProduit(produit);
     this.panier = this.panierService.getProduits();
   }
 
   ajouterProduit(produit: any): void {
+    console.log(this.panier)
     this.panierService.ajouterProduit(produit);
     this.panier = this.panierService.getProduits();
     console.log(this.panier);

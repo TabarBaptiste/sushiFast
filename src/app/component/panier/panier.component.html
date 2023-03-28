@@ -5,7 +5,7 @@
       <div *ngIf="panier.length === 0">Votre panier est vide</div>
       <div class="produit" *ngFor="let produit of panier">
         <h3>{{ produit.nom }}</h3>
-        <img src="{{ produit.image }}" alt="{{ produit.nom }}">
+        <img src="{{ urlImages }}{{ produit.image }}" alt="{{ produit.nom }}">
         <div class="description">{{ produit.description }}</div>
         <div class="prix">{{ produit.prix }} €</div>
         <button (click)="supprimerProduit(produit)">Supprimer</button>

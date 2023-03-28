@@ -23,7 +23,16 @@
   margin-bottom: -0.1%;
 }
 
-span{
+span {
   font-size: 70%;
 }
 
+img {
+  border-radius: 5%;
+  width: 90%;
+  margin-top: 20%;
+}
+button {
+  margin-left: 30%;
+  border-radius: 15%;
+}

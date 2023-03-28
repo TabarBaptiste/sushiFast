@@ -6,9 +6,11 @@ import { Box } from '../models/box';
 })
 export class PanierService {
 
-  private panier: Box[] = [];
+  private panier: Box[] = JSON.parse(localStorage.getItem('panier') || '[]');
 
-  constructor() { }
+  constructor() {
+    this.panier = JSON.parse(localStorage.getItem('panier') || '[]');
+  }
 
   // Fonction qui ajoute un produit au panier
   ajouterProduit(produit: Box): void {
@@ -18,6 +20,7 @@ export class PanierService {
     } else { // Si le produit existe déjà dans le panier
       this.panier[index].quantite += produit.quantite; // Incrémente la quantité du produit existant avec la quantité du produit à ajouter
     }
+    localStorage.setItem('panier', JSON.stringify(this.panier)); // Stocke le panier dans le localStorage
     console.log(this.panier); // Afficher le contenu du panier
   }
 
@@ -25,6 +28,7 @@ export class PanierService {
     const index = this.panier.findIndex(p => p.id === produit.id);
     if (index !== -1) {
       this.panier.splice(index, 1);
+      localStorage.setItem('panier', JSON.stringify(this.panier)); // Stocke le panier dans le localStorage
     }
   }
 
