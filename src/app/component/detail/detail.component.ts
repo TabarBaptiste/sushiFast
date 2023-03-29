@@ -36,12 +36,10 @@ export class DetailComponent implements OnInit {
     console.log(this.panierService.getProduits());
   }
 
-
   ajouterAuPanier(box: Box) {
     this.panierService.ajouterProduit(box);
     alert('La boîte a été ajoutée au panier.');
   }
-
 
   /*addPanier(box: Box) {
     let panier: any = localStorage.getItem('panier');

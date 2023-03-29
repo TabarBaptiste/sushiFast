@@ -1,19 +1,27 @@
-<div class="content">
-  <div class="panier">
-    <h2>Panier</h2>
-    <div class="produits">
-      <div *ngIf="panier.length === 0">Votre panier est vide</div>
-      <div class="produit" *ngFor="let produit of panier">
-        <h3>{{ produit.nom }}</h3>
-        <img src="{{ urlImages }}{{ produit.image }}" alt="{{ produit.nom }}">
-        <div class="description">{{ produit.description }}</div>
-        <div class="prix">{{ produit.prix }} €</div>
-        <button (click)="supprimerProduit(produit)">Supprimer</button>
-      </div>
+<div class="panier">
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of panier">
+        <td><img [src]="urlImages + produit.image" alt="{{ produit.nom }}" class="produit-image"></td>
+        <td>{{ produit.nom }}</td>
+        <td>{{ produit.prix }}€</td>
+        <td><button (click)="removeFromPanier(produit)">Supprimer</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="panier-total">
+    <div class="panier-prix">
+      <h6>Coût des produits</h6>
+      <p>{{ getTotal() }}€</p>
     </div>
-    <!--<div class="actions">
-    <button *ngIf="panier.length > 0" (click)="viderPanier()">Vider le panier</button>
-    <button *ngIf="panier.length > 0" (click)="commander()">Commander</button>
-  </div>-->
+    <button class="panier-valider">Valider ma commande</button>
   </div>
 </div>

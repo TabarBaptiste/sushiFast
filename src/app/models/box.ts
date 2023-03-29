@@ -6,5 +6,4 @@ export interface Box {
   image: string;
   saveurs: string;
   aliments: { nom: string; quantite: number }[];
-  quantite: any;
 }

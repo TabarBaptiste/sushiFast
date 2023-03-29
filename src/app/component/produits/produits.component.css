@@ -41,10 +41,12 @@ img {
 }
 
 button{
-  width: auto;
-  height: auto;
+  padding: 5px;
+  background-color: yellow;
+  color: white;
+  border: none;
   border-radius: 5px;
-  border-color: #e621af;
+  cursor: pointer;
 }
 
 a{
