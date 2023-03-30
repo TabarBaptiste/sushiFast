@@ -17,10 +17,10 @@ export class DetailComponent implements OnInit {
   urlImages: string = "http://localhost:8080/api/images/";
 
   constructor(
-    private route: ActivatedRoute,
-    private myApiService: MyApiService,
-    private panierService: PanierService,
-    private router: Router
+    private route: ActivatedRoute, // Service d'accès aux paramètres de la route
+    private myApiService: MyApiService, // Service d'accès à l'API
+    private panierService: PanierService, // Service de gestion du panier
+    private router: Router // Service de navigation
   ) { }
 
   ngOnInit(): void {
@@ -37,24 +37,13 @@ export class DetailComponent implements OnInit {
   }
 
   ajouterAuPanier(box: Box) {
-    this.panierService.ajouterProduit(box);
+    this.panierService.ajouterProduit(box); // Ajout de la boîte au panier via le service
     alert('La boîte a été ajoutée au panier.');
   }
 
-  /*addPanier(box: Box) {
-    let panier: any = localStorage.getItem('panier');
-    if (!panier) {
-      panier = [];
-    } else {
-      panier = JSON.parse(panier);
-    }
-    panier.push(box);
-    localStorage.setItem('panier', JSON.stringify(panier));
-    alert('La boîte a été ajoutée au panier.');
-  }*/
-
   goToPanier() {
-    this.router.navigate(['/panier']);
+    this.router.navigate(['/panier']); // Redirection vers la page du panier
   }
 
 }
+
