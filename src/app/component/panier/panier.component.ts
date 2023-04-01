@@ -40,6 +40,7 @@ export class PanierComponent implements OnInit {
   removeFromPanier(box: Box) {
     const index = this.panier.indexOf(box);
     if (index !== -1) {
+      alert('Voulez vous supprimer ce produit ?.'); // Affiche une alerte pour confirmer la suppression de la boîte au panier
       this.panier.splice(index, 1);
       localStorage.setItem('panier', JSON.stringify(this.panier));
     }

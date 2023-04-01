@@ -7,6 +7,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  [x: string]: any;
   isDetailRoute = false;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {

@@ -13,8 +13,10 @@ export class ProduitsComponent implements OnInit {
   constructor(private myApiService: MyApiService) { }
 
   ngOnInit() {
+    // Appelle la méthode getProduits() du service MyApiService
+    // et souscrit à son Observable pour récupérer les données
     this.myApiService.getProduits().subscribe((data: any) => {
-      this.produits = data;
+      this.produits = data; // Stocke les données dans la variable "produits"
     });
   }
 

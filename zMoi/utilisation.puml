@@ -13,11 +13,11 @@ rectangle Application {
 }
 
 user --> UC1
-user --> UC2
-user --> UC3
+UC1 -- UC2 : <<extends>>
+UC2 -- UC3 : <<extends>>
 user --> UC4
-user --> UC6
-user --> UC7
-user --> UC5
+UC4 -- UC6 : <<extends>>
+UC4 -- UC7 : <<extends>>
+UC4 -- UC5 : <<extends>>
 
 @enduml

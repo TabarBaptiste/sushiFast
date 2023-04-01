@@ -1,0 +1,45 @@
+= Sushi Shop
+:author: Tabar Labonne Baptiste et Laroui Chakib
+:docdate: 2023-03-30
+:description: Projet SushiShop
+:toc: left
+:toclevels: 5
+
+== Présentation
+Ce projet consiste en une application front-end pour la prise de commande au niveau d'un point de vente de sushis. Elle utilise le framework Angular et une API existante pour présenter la gamme de produits à la vente.
+
+== Fonctionnalités
+L'application permet à un utilisateur de passer commande de boxes de sushis en vue d'établir une commande transmissible à la production (cuisine). Voici les fonctionnalités implémentées dans ce projet :
+
+- Une page "home" présentant le projet.
+- Une page "produit" qui affiche tous les box dans l'API.
+- Pour chaque box, un bouton permet de voir les détails de la box (page détail).
+- Dans la page détail, un bouton permet de mettre une box dans notre panier (page panier).
+- Dans la page panier, un bouton permet de commander (en théorie) les boxes.
+- Accès à l'historique de nos commandes
+
+== Pratique
+
+
+== Utilisation
+Lorsque vous accédez à l'application, vous êtes redirigé vers la page d'accueil où vous trouverez une présentation du projet. Pour accéder à la liste des produits, cliquez sur "Produits" dans la barre de navigation.
+
+Sur la page "Produits", vous verrez la liste des boxes de sushis disponibles à la vente. Pour voir les détails d'une box, cliquez sur le bouton "Détails" correspondant.
+
+Sur la page "Détails", vous verrez les informations détaillées de la box de sushis sélectionnée. Vous pourrez également ajouter cette box à votre panier en cliquant sur le bouton "Ajouter au panier".
+
+Sur la page "Panier", vous verrez la liste des boxes de sushis que vous avez ajoutées à votre panier. Vous pourrez également passer votre commande (en théorie) en cliquant sur le bouton "Commander".
+
+Enfin, vous pourrez accéder à l'historique de vos commandes en cliquant sur "Historique" dans la barre de navigation.
+
+== Technologies utilisées
+Angular 13,
+TypeScript,
+HTML/CSS,
+Bootstrap,
+RxJS.
+
+== Contributeurs
+
+Tabar Labonne Baptiste et
+Laroui Chakib
