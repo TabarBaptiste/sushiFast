@@ -31,7 +31,6 @@ export class DetailComponent implements OnInit {
         this.box = data; // Stockage des détails de la boîte dans la variable box
       });
     });
-
     // Affichage du contenu du panier
     console.log(this.panierService.getProduits()); // Appelle la méthode getProduits() du service PanierService et affiche le contenu du panier dans la console
   }

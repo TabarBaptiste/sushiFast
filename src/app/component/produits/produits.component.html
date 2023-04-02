@@ -5,26 +5,15 @@
       <th>Nom</th>
       <th>Prix</th>
       <th>Pieces</th>
-      <!--<th>Saveurs</th>
-      <th>Aliments</th>-->
       <th>Image</th>
       <th>Détails</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let produit of produits">
-      <!--<td>{{ produit.id }}</td>-->
       <td>{{ produit.nom }}</td>
       <td>{{ produit.prix }} €</td>
       <td>{{ produit.pieces }}</td>
-      <!--<td>{{ produit.saveurs }}</td>
-      <td>
-        <ul>
-          <li *ngFor="let aliment of produit.aliments">
-            {{ aliment.nom }} ({{ aliment.quantite }})
-          </li>
-        </ul>
-      </td>-->
       <td><img src="{{urlImages}}{{ produit.image }}" alt="{{ produit.name }}"></td>
       <td><button><a routerLink="/box-details/{{ produit.id }}">Détails</a></button></td>
     </tr>

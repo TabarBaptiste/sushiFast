@@ -18,19 +18,103 @@ L'application permet à un utilisateur de passer commande de boxes de sushis en 
 - Dans la page panier, un bouton permet de commander (en théorie) les boxes.
 - Accès à l'historique de nos commandes
 
-== Pratique
-
 
 == Utilisation
+====
 Lorsque vous accédez à l'application, vous êtes redirigé vers la page d'accueil où vous trouverez une présentation du projet. Pour accéder à la liste des produits, cliquez sur "Produits" dans la barre de navigation.
+image:img/home.png[]
+====
 
+====
 Sur la page "Produits", vous verrez la liste des boxes de sushis disponibles à la vente. Pour voir les détails d'une box, cliquez sur le bouton "Détails" correspondant.
+image:img/box.png[]
+====
 
+====
 Sur la page "Détails", vous verrez les informations détaillées de la box de sushis sélectionnée. Vous pourrez également ajouter cette box à votre panier en cliquant sur le bouton "Ajouter au panier".
+image:img/details.png[]
+====
 
+====
 Sur la page "Panier", vous verrez la liste des boxes de sushis que vous avez ajoutées à votre panier. Vous pourrez également passer votre commande (en théorie) en cliquant sur le bouton "Commander".
+image:img/panier.png[]
+====
 
-Enfin, vous pourrez accéder à l'historique de vos commandes en cliquant sur "Historique" dans la barre de navigation.
+====
+Enfin, vous pourrez accéder à l'historique de vos commandes en cliquant sur "Historique" dans la barre de navigation. (affichage à finaliser)
+image:img/historique.JPG[]
+====
+
+== Codes
+=== Produits
+image:img/produit_code.png[]
+
+=== Détails
+image:img/details_code.png[]
+
+=== Panier
+image:img/panier_code1.png[]
+image:img/panier_code2.png[]
+
+=== Serice API
+image:img/my_api.png[]
+
+=== Serice panier
+image:img/panier_ts_code.png[]
+
+=== App Routing
+image:img/app_routing.png[]
+
+=== Box
+image:img/box_ts.png[]
+
+=== Produit (box) HTML
+image:img/produit_html.png[]
+
+=== Détails (box) HTML
+image:img/details_html.png[]
+
+=== Environnement API
+image:img/environnement.png[]
+
+
+== Diagramme
+=== Diagramme d'utilisation
+image:utilisation.png[]
+
+=== Diagramme des tiers 
+image:solution.png[]
+
+== Structure JSON
+[source,json]
+====
+[source,json]
+----
+{
+  "items": [
+    {
+      "id": 1,
+      "date": 02/04/2023
+      "name": "SushiBox1",
+      "pieces": 6,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "date": 05/04/2023
+      "name": "SushiBox2",
+      "pieces": 8,
+      "quantity": 1
+    }
+  ]
+  "nomClient": "Cappuozzo le twe Gwo Makoumè",
+  "adresseLivraison": "15 Rue de la Paix, Paris",
+  "telephone": "01 23 45 67 89",
+  "montantTotal": 60 €
+}
+----
+====
+
 
 == Technologies utilisées
 Angular 13,
@@ -38,6 +122,14 @@ TypeScript,
 HTML/CSS,
 Bootstrap,
 RxJS.
+
+== Conclusion
+
+En conclusion, la réalisation de ce projet nous a permis de développer nos compétences en Angular et en développement web. Nous avons appris à concevoir une application de e-commerce, à créer des composants et à les intégrer dans un système fonctionnel. Nous avons également amélioré nos compétences en matière de design et de développement d'interfaces utilisateur conviviales.
+
+Ce projet nous a également permis de mettre en pratique des concepts clés tels que la gestion des états, l'utilisation des services, l'interaction avec des API externes et la persistance des données avec le LocalStorage.
+
+Nous sommes assez fier du résultat final et nous espèrons que cette application pourra être utilisée comme une référence pour les futurs projets de développement web que nous réaliserons.
 
 == Contributeurs
 

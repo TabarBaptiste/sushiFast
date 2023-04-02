@@ -17,7 +17,6 @@ export class PanierService {
     // Initialise le panier avec le contenu stocké dans le localStorage (à nouveau, pour être sûr)
     this.panier = JSON.parse(localStorage.getItem('panier') || '[]');
   }
-
   // Fonction qui ajoute un produit au panier
   ajouterProduit(produit: Box): void {
     // Ajoute le produit à la fin du tableau panier
@@ -29,12 +28,10 @@ export class PanierService {
     // Affiche le contenu du panier dans la console (pour debug)
     console.log(this.panier);
   }
-
   // Fonction qui retourne un BehaviorSubject avec le contenu du panier
   getProduits(): BehaviorSubject<Box[]> {
     // Affiche le contenu du panier dans la console (pour debug)
     console.log(this.panier);
     return this.panierSubject;
   }
-
 }
