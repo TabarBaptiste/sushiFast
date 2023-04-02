@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages # Ou la branche que vous utilisez pour le développement
+      - main # Ou la branche que vous utilisez pour le développement
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
