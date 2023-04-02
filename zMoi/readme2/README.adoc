@@ -36,7 +36,7 @@ image:img/details.png[]
 ====
 
 ====
-Sur la page "Panier", vous verrez la liste des boxes de sushis que vous avez ajoutées à votre panier. Vous pourrez également passer votre commande (en théorie) en cliquant sur le bouton "Commander".
+Sur la page "Panier", vous verrez la liste des boxes de sushis que vous avez ajoutée à votre panier. Vous pourrez également passer votre commande (en théorie) en cliquant sur le bouton "Commander".
 image:img/panier.png[]
 ====
 
@@ -56,10 +56,10 @@ image:img/details_code.png[]
 image:img/panier_code1.png[]
 image:img/panier_code2.png[]
 
-=== Serice API
+=== Service API
 image:img/my_api.png[]
 
-=== Serice panier
+=== Service panier
 image:img/panier_ts_code.png[]
 
 === App Routing
@@ -77,12 +77,14 @@ image:img/details_html.png[]
 === Environnement API
 image:img/environnement.png[]
 
+=== Code de l'API
+image:img/apiController.png[]
 
 == Diagramme
 === Diagramme d'utilisation
 image:utilisation.png[]
 
-=== Diagramme des tiers 
+=== Diagramme des tiers
 image:solution.png[]
 
 == Structure JSON
@@ -110,11 +112,25 @@ image:solution.png[]
   "nomClient": "Jean Makoumè",
   "adresseLivraison": "15 Rue de la Paix, Paris",
   "telephone": "01 23 45 67 89",
-  "montantTotal": 60 €
+  "montantTotal": 60
 }
 ----
 ====
 
+== Cybersécurité
+Liste d'événements redoutés pour mon projet de site de vente de sushi :
+
+1. Vol de données personnelles des clients tels que noms, adresses, numéros de téléphone et de cartes bancaires.
+2. Attaque par déni de service (DDoS) empêchant les clients d'accéder au site et de passer des commandes.
+3. Injection de code malveillant (malware) dans le site Web, pouvant permettre à des pirates informatiques d'intercepter les informations de paiement des clients.
+4. Attaque de phishing, où les clients peuvent recevoir des e-mails frauduleux leur demandant de fournir des informations de compte ou de paiement.
+
+Contre-mesures (EvilUS) pour ces événements redoutés :
+
+1. Utilisation de pratiques de sécurité appropriées pour protéger les données des clients, telles que le cryptage des données stockées et la mise en œuvre d'une politique de mot de passe fort.
+2. Mise en place de mesures de sécurité pour prévenir les attaques DDoS, telles que l'utilisation d'un pare-feu et la surveillance de la bande passante pour détecter les pics de trafic suspects.
+3. Mise à jour régulière du logiciel et des systèmes d'exploitation pour prévenir les vulnérabilités connues qui pourraient être exploitées par les pirates informatiques.
+4. Sensibilisation des clients aux techniques de phishing et fourniture d'informations claires sur les pratiques de sécurité du site pour éviter les fraudes.
 
 == Technologies utilisées
 Angular 13,
@@ -125,12 +141,13 @@ RxJS.
 
 == Conclusion
 
-En conclusion, la réalisation de ce projet nous a permis de développer nos compétences en Angular et en développement web. Nous avons appris à concevoir une application de e-commerce, à créer des composants et à les intégrer dans un système fonctionnel. Nous avons également amélioré nos compétences en matière de design et de développement d'interfaces utilisateur conviviales.
+En conclusion, la réalisation de ce projet nous a permis de développer nos compétences en Angular et en développement web. Nous avons appris à concevoir une application d'e-commerce, à créer des composants et à les intégrer dans un système fonctionnel. Nous avons également amélioré nos compétences en matière de design et de développement d'interfaces utilisateur conviviales.
 
 Ce projet nous a également permis de mettre en pratique des concepts clés tels que la gestion des états, l'utilisation des services, l'interaction avec des API externes et la persistance des données avec le LocalStorage.
 
-Nous sommes assez fier du résultat final et nous espèrons que cette application pourra être utilisée comme une référence pour les futurs projets de développement web que nous réaliserons.
+Nous sommes assez fier du résultat final et nous espérons que cette application pourra être utilisée comme une référence pour les futurs projets de développement web que nous réaliserons.
 
 == Contributeurs
 
 Tabar Labonne Baptiste, Caffiaux Elian, Rodrigues Loïc et Laroui Chakib
+4-
