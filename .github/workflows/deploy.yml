@@ -1,0 +1,23 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - gh-pages # Ou la branche que vous utilisez pour le développement
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install dependencies
+        run: npm install
+      - name: Build Angular app
+        run: npm run build --prod
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.12.1
+        with:
+          branch: gh-pages
+          folder: dist/sushiFast # Le nom de votre application
