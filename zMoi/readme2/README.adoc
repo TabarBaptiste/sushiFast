@@ -1,5 +1,5 @@
 = Sushi Shop
-:author: Tabar Labonne Baptiste et Laroui Chakib
+:author: Tabar Labonne Baptiste, Caffiaux Elian, Rodrigues Loïc et Laroui Chakib
 :docdate: 2023-03-30
 :description: Projet SushiShop
 :toc: left
@@ -107,7 +107,7 @@ image:solution.png[]
       "quantity": 1
     }
   ]
-  "nomClient": "Cappuozzo le twe Gwo Makoumè",
+  "nomClient": "Jean Makoumè",
   "adresseLivraison": "15 Rue de la Paix, Paris",
   "telephone": "01 23 45 67 89",
   "montantTotal": 60 €
@@ -133,5 +133,4 @@ Nous sommes assez fier du résultat final et nous espèrons que cette applicatio
 
 == Contributeurs
 
-Tabar Labonne Baptiste et
-Laroui Chakib
+Tabar Labonne Baptiste, Caffiaux Elian, Rodrigues Loïc et Laroui Chakib
