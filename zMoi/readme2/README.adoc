@@ -79,6 +79,11 @@ image:img/environnement.png[]
 
 === Code de l'API
 image:img/apiController.png[]
+Ces fonctions sont des endpoints d'une API REST en Kotlin qui sert à fournir des données et des images aux clients.
+
+- allBoxes() renvoie toutes les boîtes stockées en base de données sous forme de liste d'objets de type BoxDtoJson.
+- getImage() récupère une image stockée dans le dossier "static/images" à partir de son nom d'image et renvoie la ressource correspondante avec un type de contenu image/jpeg.
+- getBoxById() renvoie une boîte stockée en base de données à partir de son ID sous forme d'un objet BoxDtoJson. Si la boîte est introuvable, elle renvoie une réponse avec le statut "notFound()".
 
 == Diagramme
 === Diagramme d'utilisation
