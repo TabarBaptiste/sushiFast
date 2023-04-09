@@ -8,7 +8,7 @@ import { MyApiService } from 'src/app/service/my-api.service';
 export class ProduitsComponent implements OnInit {
 
   produits: any[] = [];
-  urlImages: string = "http://localhost:8080/api/images/";
+  urlImages: string = "http://192.168.1.75:8080/api/images/";
 
   constructor(private myApiService: MyApiService) { }
 
