@@ -74,10 +74,4 @@ export class PanierComponent implements OnInit {
       this.router.navigate(['/historique']);
     }
   }
-
-  /*commander(): void {
-    this.panierService.commander();
-    this.panier = this.panierService.getProduits();
-  }*/
-
 }

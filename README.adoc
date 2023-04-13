@@ -87,10 +87,10 @@ Ces fonctions sont des endpoints d'une API REST en Kotlin qui sert à fournir de
 
 == Diagramme
 === Diagramme d'utilisation
-image:utilisation.png[]
+image:img/utilisation.png[]
 
 === Diagramme des tiers
-image:solution.png[]
+image:img/solution.png[]
 
 == Structure JSON
 [source,json]
@@ -149,7 +149,8 @@ Angular 13,
 TypeScript,
 HTML/CSS,
 Bootstrap,
+Spring Boot
 RxJS.
 
 == Contributeurs
-TABAR LABONNE Baptiste, LAROUI Chakib, CAFFIAUX Elian, et RODRIGUES Loïc
+TABAR LABONNE Baptiste, LAROUI Chakib
