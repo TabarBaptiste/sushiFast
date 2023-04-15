@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import { PanierService } from 'src/app/service/panier.service';
 import { Box } from 'src/app/models/box';
 import { Router } from '@angular/router';
 
