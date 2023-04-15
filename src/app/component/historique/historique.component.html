@@ -1,0 +1,11 @@
+<div class="historique">
+  <h1>Merci pour votre commande !</h1>
+  <h2>Voici votre récapitulatif de commande :</h2>
+
+  <div *ngFor="let box of commandeValidee">
+    <h3>{{ box.nom }}</h3>
+    <p>Prix : {{ box.prix }} €</p>
+  </div>
+
+  <p>Total : {{ getTotal() }} €</p>
+</div>

@@ -10,11 +10,11 @@ database "API" {
 }
 
 package "Base de données" {
-  database "Base de données MySQL" {
-    [Tables de la base de données]
+  database "Local Storage" {
+    [LocalStorage]
   }
 }
 
 [Navigateur] --> [Serveur API] : Requêtes HTTP
-[Serveur API] --> [Tables de la base de données] : Requêtes SQL
+[Serveur API] --> [LocalStorage] : Requêtes SQL
 @enduml

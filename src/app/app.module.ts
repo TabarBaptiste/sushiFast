@@ -12,6 +12,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProduitsComponent } from './component/produits/produits.component';
 import { DetailComponent } from './component/detail/detail.component';
 import { PanierComponent } from './component/panier/panier.component';
+import { HistoriqueComponent } from './component/historique/historique.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PanierComponent } from './component/panier/panier.component';
     ProduitsComponent,
     DetailComponent,
     PanierComponent,
+    HistoriqueComponent,
   ],
   imports: [
     BrowserModule,

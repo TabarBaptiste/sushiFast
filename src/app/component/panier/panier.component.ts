@@ -75,9 +75,4 @@ export class PanierComponent implements OnInit {
     }
   }
 
-  /*commander(): void {
-    this.panierService.commander();
-    this.panier = this.panierService.getProduits();
-  }*/
-
 }
