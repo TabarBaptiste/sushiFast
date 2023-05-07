@@ -18,10 +18,13 @@
     </tbody>
   </table>
   <div class="panier-total">
-    <div class="panier-prix">
-      <h6>Coût des produits</h6>
-      <p>{{ getTotal() }}€</p>
-    </div>
+    <p *ngIf="panier.length == 0">Le panier est vide.</p>
+    <div *ngIf="panier.length > 0">
+      <p>Total : {{ getTotal() }} €</p>
+
+      <p *ngIf="panier.length > 3">
+        Prix avec réduction de 5% : <strong>{{ getReduc() }} €</strong>
+      </p>  
     <button class="btn btn-success" (click)="validerCommande()">Valider la commande</button>
   </div>
 </div>

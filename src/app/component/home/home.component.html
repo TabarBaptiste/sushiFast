@@ -7,6 +7,8 @@
         <p class="lead">Nous sommes une entreprise de livraison de sushi basée à Paris, spécialisée dans la préparation et la livraison de sushi frais à nos clients.</p>
         <p class="lead">Nous proposons une large gamme de sushis, sashimis et makis, tous préparés avec des ingrédients frais et de qualité.</p>
         <a href="#" class="btn btn-primary mt-4">Commander maintenant</a>
+        <p  class="lead" *ngIf="panier.length > 3">Vous êtes éligible à une réduction de 5%, car vous avez  plus de trois article dans votre panier</p>
+
       </div>
     </div>
     <!-- Colonne avec l'image -->

@@ -1,0 +1,10 @@
+A/ Je dois récupérer le nombre de boxes existants dans le localStorage, et si le nombre de box => 10, alors je retire 5% du total.
+ON souhaite qu'au-delà de 10 articles dans le panier, une réduction de 5% soit appliquée sur le montant total. Le client devra voir sur la page "panier", le prux sans réduction et le prix après réduction (en gras)
+OK
+
+B/ Je dois récupérer le nombre de boxes existants dans le localStorage, et si le nombre de box = 9, j'affiche une notifaction flash pour lui indiquer que le panier qu'il vient de consulter permet une réduction de 5%.
+    On souhaite signaler au client, sur la "home", si le panier permet de bénficier de la promotion de 5% ou non.
+
+C/ Pour présenter l'ensmble total des saveurs relatives aux produits du panier, 
+je n'aurai qu'à afficher les saveurs dans une bulle différentes que celle des boxs. 
+J'utiliserai la même méthode que pour afficher les boxs dans le panier. Mais en ignorant "image, nom, prix". 

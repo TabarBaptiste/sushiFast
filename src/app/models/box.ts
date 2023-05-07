@@ -1,4 +1,5 @@
 export interface Box {
+  quantite: number;
   id: number;
   nom: string;
   description: string;

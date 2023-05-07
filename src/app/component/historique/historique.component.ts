@@ -8,18 +8,35 @@ import { Box } from '../../models/box';
 })
 export class HistoriqueComponent {
 
-  commandeValidee: Box[] = [];
+  historique: Box[] = [];
+  //commandeValidee: Box[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    let historique: any = localStorage.getItem('historique');
+    if (historique) {
+      this.historique = JSON.parse(historique);
+      console.log(this.historique);
+    }
+  }
+
+  /*ngOnInit(): void {
     const commandeValidee = localStorage.getItem('commandeValidee');
     if (commandeValidee) {
       this.commandeValidee = JSON.parse(commandeValidee);
       console.log(this.commandeValidee); // Vérifier que les données sont correctement stockées dans la variable commandeValidee
     }
-  }
+  }*/
 
+  getTotal(): number {
+    let total: number = 0;
+    for (let box of this.historique) {
+      total += box.prix;
+    }
+    return total;
+  }
+  /*
   getTotal(): number {
     let total: number = 0;
     for (let box of this.commandeValidee) {
@@ -27,4 +44,5 @@ export class HistoriqueComponent {
     }
     return total;
   }
+  */
 }
